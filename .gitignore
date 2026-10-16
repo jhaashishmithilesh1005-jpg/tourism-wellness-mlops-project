@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+.ipynb_checkpoints/
+tourism_project/data/processed/
+tourism_project/model_building/artifacts/
+mlruns/
+mlartifacts/
+mlflow.db
+tourism_project/model_building/mlruns/
+tourism_project/model_building/mlruns_test/
+mlruns-artifacts/
