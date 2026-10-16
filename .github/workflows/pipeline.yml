@@ -68,6 +68,7 @@ jobs:
         run: python tourism_project/model_building/train.py
 
   deploy-hosting:
+    if: ${{ vars.ENABLE_HF_DOCKER_SPACE == 'true' }}
     needs: [model-training, data-prep, register-dataset]
     runs-on: ubuntu-latest
     steps:

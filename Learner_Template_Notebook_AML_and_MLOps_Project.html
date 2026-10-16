@@ -7929,10 +7929,10 @@ a.anchor-link {
 <span class="n">BASE_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">resolve</span><span class="p">();</span> <span class="n">PROJECT_ROOT</span> <span class="o">=</span> <span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s2">"tourism_project"</span><span class="p">;</span> <span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">PROJECT_ROOT</span> <span class="o">/</span> <span class="s2">"data"</span>
 <span class="n">WORKFLOW_DIR</span> <span class="o">=</span> <span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s2">".github"</span> <span class="o">/</span> <span class="s2">"workflows"</span><span class="p">;</span> <span class="n">WORKFLOW_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="p">(</span><span class="n">PROJECT_ROOT</span> <span class="o">/</span> <span class="s2">"hosting"</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">HF_USERNAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"HF_USERNAME"</span><span class="p">,</span> <span class="s2">"YOUR_HF_USERNAME"</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-<span class="n">GITHUB_USERNAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"GITHUB_USERNAME"</span><span class="p">,</span> <span class="s2">"YOUR_GITHUB_USERNAME"</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">HF_USERNAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"HF_USERNAME"</span><span class="p">,</span> <span class="s2">"ashishjha001"</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">GITHUB_USERNAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"GITHUB_USERNAME"</span><span class="p">,</span> <span class="s2">"jhaashishmithilesh1005-jpg"</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 <span class="n">GITHUB_EMAIL</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"GITHUB_EMAIL"</span><span class="p">,</span> <span class="s2">"YOUR_GITHUB_EMAIL"</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-<span class="n">GITHUB_REPO</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"GITHUB_REPO"</span><span class="p">,</span> <span class="s2">"YOUR_GITHUB_REPO"</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">GITHUB_REPO</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"GITHUB_REPO"</span><span class="p">,</span> <span class="s2">"tourism-wellness-mlops-project"</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">"HF_USERNAME"</span><span class="p">:</span> <span class="n">HF_USERNAME</span><span class="p">,</span> <span class="s2">"GITHUB_USERNAME"</span><span class="p">:</span> <span class="n">GITHUB_USERNAME</span><span class="p">,</span> <span class="s2">"GITHUB_EMAIL"</span><span class="p">:</span> <span class="n">GITHUB_EMAIL</span><span class="p">,</span> <span class="s2">"GITHUB_REPO"</span><span class="p">:</span> <span class="n">GITHUB_REPO</span><span class="p">}</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">getpass</span><span class="w"> </span><span class="kn">import</span> <span class="n">getpass</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">read_secret</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">prompt</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
@@ -10360,7 +10360,7 @@ Observation: The value counts confirm only those three category variants; other 
     <span class="n">configured</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"HF_MODEL_REPO"</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">configured</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">configured</span>
-    <span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"HF_USERNAME"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"HF_USERNAME"</span><span class="p">,</span> <span class="s2">"ashishjha001"</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">username</span> <span class="ow">and</span> <span class="n">username</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">"YOUR_HF_USERNAME"</span><span class="p">:</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">/tourism-wellness-model"</span>
     <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">"Set HF_MODEL_REPO or HF_USERNAME before loading the model."</span><span class="p">)</span>
@@ -10659,7 +10659,15 @@ Deployment pins resolve on the exact Python 3.12 used by the Dockerfile when the
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Hosting">Hosting<a class="anchor-link" href="#Hosting">¶</a></h1>
+<h1 id="Hosting">Hosting<a class="anchor-link" href="#Hosting">¶</a></h1><h2 id="Free-public-deployment:-Streamlit-Community-Cloud">Free public deployment: Streamlit Community Cloud<a class="anchor-link" href="#Free-public-deployment:-Streamlit-Community-Cloud">¶</a></h2><p>The app is in <code>tourism_project/deployment/app.py</code> and loads the public model <code>ashishjha001/tourism-wellness-model</code>. It needs no Hugging Face token or Streamlit secrets.</p>
+<ol>
+<li>Sign in to <a href="https://share.streamlit.io/">Streamlit Community Cloud</a> with GitHub.</li>
+<li>Choose <strong>Create app</strong> and select repository <code>jhaashishmithilesh1005-jpg/tourism-wellness-mlops-project</code>, branch <code>main</code>.</li>
+<li>Set <strong>Main file path</strong> to <code>tourism_project/deployment/app.py</code>.</li>
+<li>In <strong>Advanced settings</strong>, choose Python <code>3.12</code>, leave Secrets empty, and deploy.</li>
+<li>When ready, copy the generated <code>.streamlit.app</code> URL. Full steps are in <code>STREAMLIT_CLOUD_DEPLOYMENT.md</code>.</li>
+</ol>
+<p>The GitHub Actions workflow continues to publish the dataset and model. The Hugging Face Docker Space job is skipped by default because this hosting option requires a paid plan. This free Streamlit deployment is an alternative; it does not satisfy a rubric item that specifically requires a Hugging Face Docker Space.</p>
 </div>
 </div>
 </div>
@@ -10790,23 +10798,39 @@ Deployment pins resolve on the exact Python 3.12 used by the Dockerfile when the
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> README.md
 <span class="c1"># Wellness Tourism Purchase Prediction</span>
 
-<span class="n">This</span> <span class="n">repository</span> <span class="n">contains</span> <span class="n">a</span> <span class="n">reproducible</span> <span class="n">pipeline</span> <span class="k">for</span> <span class="n">estimating</span> <span class="err">`</span><span class="n">ProdTaken</span><span class="err">`</span> <span class="kn">from</span><span class="w"> </span><span class="nn">customer</span> <span class="ow">and</span> <span class="n">sales</span> <span class="n">interaction</span> <span class="n">features</span><span class="o">.</span>
+<span class="n">This</span> <span class="n">repository</span> <span class="n">contains</span> <span class="n">a</span> <span class="n">reproducible</span> <span class="n">machine</span> <span class="n">learning</span> <span class="n">pipeline</span> <span class="k">for</span> <span class="n">estimating</span> <span class="err">`</span><span class="n">ProdTaken</span><span class="err">`</span> <span class="kn">from</span><span class="w"> </span><span class="nn">customer</span> <span class="ow">and</span> <span class="n">sales</span> <span class="n">interaction</span> <span class="n">features</span><span class="o">.</span>
 
 <span class="c1">## Repository layout</span>
 
 <span class="o">-</span> <span class="err">`</span><span class="n">tourism_project</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">tourism</span><span class="o">.</span><span class="n">csv</span><span class="err">`</span><span class="p">:</span> <span class="n">source</span> <span class="n">dataset</span><span class="o">.</span>
 <span class="o">-</span> <span class="err">`</span><span class="n">tourism_project</span><span class="o">/</span><span class="n">model_building</span><span class="o">/</span><span class="n">data_register</span><span class="o">.</span><span class="n">py</span><span class="err">`</span><span class="p">:</span> <span class="n">idempotent</span> <span class="n">Hugging</span> <span class="n">Face</span> <span class="n">dataset</span> <span class="n">registration</span><span class="o">.</span>
-<span class="o">-</span> <span class="err">`</span><span class="n">tourism_project</span><span class="o">/</span><span class="n">model_building</span><span class="o">/</span><span class="n">prep</span><span class="o">.</span><span class="n">py</span><span class="err">`</span><span class="p">:</span> <span class="n">verified</span> <span class="n">category</span> <span class="n">cleanup</span><span class="p">,</span> <span class="n">stratified</span> <span class="mi">80</span><span class="o">/</span><span class="mi">20</span> <span class="n">split</span><span class="p">,</span> <span class="ow">and</span> <span class="n">Hugging</span> <span class="n">Face</span> <span class="n">upload</span><span class="o">.</span>
-<span class="o">-</span> <span class="err">`</span><span class="n">tourism_project</span><span class="o">/</span><span class="n">model_building</span><span class="o">/</span><span class="n">train</span><span class="o">.</span><span class="n">py</span><span class="err">`</span><span class="p">:</span> <span class="n">six</span> <span class="n">model</span> <span class="n">families</span><span class="p">,</span> <span class="mi">5</span><span class="o">-</span><span class="n">fold</span> <span class="n">F2</span> <span class="n">tuning</span><span class="p">,</span> <span class="n">MLflow</span> <span class="n">tracking</span><span class="p">,</span> <span class="n">evaluation</span><span class="p">,</span> <span class="ow">and</span> <span class="n">model</span> <span class="n">registration</span><span class="o">.</span>
+<span class="o">-</span> <span class="err">`</span><span class="n">tourism_project</span><span class="o">/</span><span class="n">model_building</span><span class="o">/</span><span class="n">prep</span><span class="o">.</span><span class="n">py</span><span class="err">`</span><span class="p">:</span> <span class="n">category</span> <span class="n">cleanup</span><span class="p">,</span> <span class="n">stratified</span> <span class="mi">80</span><span class="o">/</span><span class="mi">20</span> <span class="n">split</span><span class="p">,</span> <span class="ow">and</span> <span class="n">Hub</span> <span class="n">upload</span><span class="o">.</span>
+<span class="o">-</span> <span class="err">`</span><span class="n">tourism_project</span><span class="o">/</span><span class="n">model_building</span><span class="o">/</span><span class="n">train</span><span class="o">.</span><span class="n">py</span><span class="err">`</span><span class="p">:</span> <span class="n">model</span> <span class="n">comparison</span><span class="p">,</span> <span class="n">five</span><span class="o">-</span><span class="n">fold</span> <span class="n">F2</span> <span class="n">tuning</span><span class="p">,</span> <span class="n">MLflow</span> <span class="n">tracking</span><span class="p">,</span> <span class="n">evaluation</span><span class="p">,</span> <span class="ow">and</span> <span class="n">winning</span> <span class="n">model</span> <span class="n">registration</span><span class="o">.</span>
 <span class="o">-</span> <span class="err">`</span><span class="n">tourism_project</span><span class="o">/</span><span class="n">deployment</span><span class="o">/</span><span class="err">`</span><span class="p">:</span> <span class="n">Streamlit</span> <span class="n">app</span><span class="p">,</span> <span class="n">Dockerfile</span><span class="p">,</span> <span class="ow">and</span> <span class="n">pinned</span> <span class="n">runtime</span> <span class="n">requirements</span><span class="o">.</span>
-<span class="o">-</span> <span class="err">`</span><span class="n">tourism_project</span><span class="o">/</span><span class="n">hosting</span><span class="o">/</span><span class="n">hosting</span><span class="o">.</span><span class="n">py</span><span class="err">`</span><span class="p">:</span> <span class="n">public</span> <span class="n">Docker</span> <span class="n">Space</span> <span class="n">creation</span> <span class="ow">and</span> <span class="n">upload</span><span class="o">.</span>
+<span class="o">-</span> <span class="err">`</span><span class="n">tourism_project</span><span class="o">/</span><span class="n">hosting</span><span class="o">/</span><span class="n">hosting</span><span class="o">.</span><span class="n">py</span><span class="err">`</span><span class="p">:</span> <span class="n">optional</span> <span class="n">Hugging</span> <span class="n">Face</span> <span class="n">Docker</span> <span class="n">Space</span> <span class="n">publisher</span> <span class="p">(</span><span class="n">requires</span> <span class="n">a</span> <span class="n">paid</span> <span class="n">HF</span> <span class="n">plan</span><span class="p">)</span><span class="o">.</span>
 <span class="o">-</span> <span class="err">`</span><span class="o">.</span><span class="n">github</span><span class="o">/</span><span class="n">workflows</span><span class="o">/</span><span class="n">pipeline</span><span class="o">.</span><span class="n">yml</span><span class="err">`</span><span class="p">:</span> <span class="n">ordered</span> <span class="n">GitHub</span> <span class="n">Actions</span> <span class="n">workflow</span><span class="o">.</span>
+
+<span class="c1">## Free public app deployment</span>
+
+<span class="n">The</span> <span class="n">free</span> <span class="n">hosting</span> <span class="n">route</span> <span class="ow">is</span> <span class="n">Streamlit</span> <span class="n">Community</span> <span class="n">Cloud</span><span class="o">.</span> <span class="n">The</span> <span class="n">app</span> <span class="n">downloads</span> <span class="n">the</span> <span class="n">public</span> <span class="n">model</span> <span class="kn">from</span><span class="w"> </span><span class="err">`</span><span class="n">ashishjha001</span><span class="o">/</span><span class="n">tourism</span><span class="o">-</span><span class="n">wellness</span><span class="o">-</span><span class="n">model</span><span class="err">`</span><span class="p">;</span> <span class="n">it</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">need</span> <span class="n">an</span> <span class="n">HF</span> <span class="n">token</span> <span class="ow">or</span> <span class="nb">any</span> <span class="n">Streamlit</span> <span class="n">secrets</span><span class="o">.</span>
+
+<span class="mf">1.</span> <span class="n">Sign</span> <span class="ow">in</span> <span class="n">to</span> <span class="p">[</span><span class="n">Streamlit</span> <span class="n">Community</span> <span class="n">Cloud</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">share</span><span class="o">.</span><span class="n">streamlit</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="p">)</span> <span class="n">using</span> <span class="n">GitHub</span> <span class="ow">and</span> <span class="n">authorize</span> <span class="n">access</span> <span class="n">to</span> <span class="n">this</span> <span class="n">public</span> <span class="n">repository</span><span class="o">.</span>
+<span class="mf">2.</span> <span class="n">Choose</span> <span class="o">**</span><span class="n">Create</span> <span class="n">app</span><span class="o">**</span> <span class="ow">and</span> <span class="n">select</span> <span class="err">`</span><span class="n">jhaashishmithilesh1005</span><span class="o">-</span><span class="n">jpg</span><span class="o">/</span><span class="n">tourism</span><span class="o">-</span><span class="n">wellness</span><span class="o">-</span><span class="n">mlops</span><span class="o">-</span><span class="n">project</span><span class="err">`</span><span class="p">,</span> <span class="n">branch</span> <span class="err">`</span><span class="n">main</span><span class="err">`</span><span class="o">.</span>
+<span class="mf">3.</span> <span class="n">Set</span> <span class="n">the</span> <span class="n">app</span> <span class="n">file</span> <span class="n">to</span> <span class="err">`</span><span class="n">tourism_project</span><span class="o">/</span><span class="n">deployment</span><span class="o">/</span><span class="n">app</span><span class="o">.</span><span class="n">py</span><span class="err">`</span><span class="o">.</span>
+<span class="mf">4.</span> <span class="n">In</span> <span class="o">**</span><span class="n">Advanced</span> <span class="n">settings</span><span class="o">**</span><span class="p">,</span> <span class="n">select</span> <span class="n">Python</span> <span class="err">`</span><span class="mf">3.12</span><span class="err">`</span><span class="p">,</span> <span class="n">then</span> <span class="n">deploy</span><span class="o">.</span> <span class="n">The</span> <span class="n">dependencies</span> <span class="n">are</span> <span class="ow">in</span> <span class="err">`</span><span class="n">tourism_project</span><span class="o">/</span><span class="n">deployment</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span><span class="err">`</span><span class="o">.</span>
+<span class="mf">5.</span> <span class="n">Wait</span> <span class="k">for</span> <span class="n">the</span> <span class="n">app</span> <span class="n">health</span> <span class="n">check</span> <span class="n">to</span> <span class="n">finish</span><span class="o">.</span> <span class="n">Copy</span> <span class="n">the</span> <span class="n">public</span> <span class="n">app</span> <span class="n">URL</span> <span class="ow">and</span> <span class="n">save</span> <span class="n">it</span> <span class="k">as</span> <span class="err">`</span><span class="n">STREAMLIT_APP_URL</span><span class="err">`</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">notebook</span> <span class="n">only</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">the</span> <span class="n">notebook</span> <span class="n">to</span> <span class="n">check</span> <span class="n">the</span> <span class="n">live</span> <span class="n">URL</span><span class="o">.</span>
+
+<span class="n">Detailed</span> <span class="n">click</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">click</span> <span class="n">steps</span> <span class="n">are</span> <span class="ow">in</span> <span class="p">[</span><span class="n">STREAMLIT_CLOUD_DEPLOYMENT</span><span class="o">.</span><span class="n">md</span><span class="p">](</span><span class="n">STREAMLIT_CLOUD_DEPLOYMENT</span><span class="o">.</span><span class="n">md</span><span class="p">)</span><span class="o">.</span> <span class="n">Streamlit</span> <span class="n">Community</span> <span class="n">Cloud</span> <span class="n">redeploys</span> <span class="n">the</span> <span class="n">app</span> <span class="n">when</span> <span class="n">the</span> <span class="n">connected</span> <span class="n">GitHub</span> <span class="n">branch</span> <span class="n">receives</span> <span class="n">updates</span><span class="o">.</span>
+
+<span class="c1">## GitHub Actions and Hugging Face</span>
+
+<span class="n">The</span> <span class="n">workflow</span> <span class="n">registers</span> <span class="n">the</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">prepares</span> <span class="n">features</span><span class="p">,</span> <span class="n">trains</span><span class="o">/</span><span class="n">evaluates</span> <span class="n">the</span> <span class="n">model</span><span class="p">,</span> <span class="ow">and</span> <span class="n">publishes</span> <span class="n">the</span> <span class="n">model</span> <span class="n">to</span> <span class="n">Hugging</span> <span class="n">Face</span><span class="o">.</span> <span class="n">The</span> <span class="n">optional</span> <span class="err">`</span><span class="n">deploy</span><span class="o">-</span><span class="n">hosting</span><span class="err">`</span> <span class="n">job</span> <span class="ow">is</span> <span class="n">skipped</span> <span class="n">by</span> <span class="n">default</span> <span class="n">because</span> <span class="n">public</span> <span class="n">Hugging</span> <span class="n">Face</span> <span class="n">Docker</span> <span class="n">Spaces</span> <span class="n">require</span> <span class="n">a</span> <span class="n">paid</span> <span class="n">plan</span><span class="o">.</span> <span class="n">The</span> <span class="n">free</span> <span class="n">Streamlit</span> <span class="n">app</span> <span class="ow">is</span> <span class="n">deployed</span> <span class="n">by</span> <span class="n">connecting</span> <span class="n">the</span> <span class="n">repository</span> <span class="n">once</span> <span class="ow">in</span> <span class="n">Streamlit</span> <span class="n">Community</span> <span class="n">Cloud</span><span class="o">.</span>
+
+<span class="n">The</span> <span class="n">workflow</span> <span class="n">uses</span> <span class="n">the</span> <span class="n">repository</span> <span class="n">secret</span> <span class="err">`</span><span class="n">HF_TOKEN</span><span class="err">`</span> <span class="k">for</span> <span class="n">dataset</span><span class="o">/</span><span class="n">model</span> <span class="n">uploads</span><span class="o">.</span> <span class="n">Never</span> <span class="n">put</span> <span class="n">that</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">source</span> <span class="n">files</span><span class="p">,</span> <span class="n">the</span> <span class="n">notebook</span><span class="p">,</span> <span class="ow">or</span> <span class="n">Streamlit</span> <span class="n">secrets</span><span class="o">.</span> <span class="n">The</span> <span class="n">public</span> <span class="n">model</span> <span class="n">itself</span> <span class="n">can</span> <span class="n">be</span> <span class="n">downloaded</span> <span class="n">without</span> <span class="n">authentication</span><span class="o">.</span>
 
 <span class="c1">## Run locally</span>
 
-<span class="n">Use</span> <span class="n">Python</span> <span class="mf">3.12</span><span class="o">.</span> <span class="n">Install</span> <span class="n">the</span> <span class="n">pinned</span> <span class="n">dependencies</span> <span class="k">with</span> <span class="err">`</span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">tourism_project</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span><span class="err">`</span><span class="o">.</span> <span class="n">Set</span> <span class="err">`</span><span class="n">HF_USERNAME</span><span class="err">`</span> <span class="ow">and</span> <span class="err">`</span><span class="n">HF_TOKEN</span><span class="err">`</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">environment</span><span class="o">.</span> <span class="n">The</span> <span class="n">workflow</span> <span class="n">registers</span> <span class="n">the</span> <span class="n">raw</span> <span class="n">file</span><span class="p">,</span> <span class="n">prepares</span> <span class="n">data</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">Hub</span><span class="p">,</span> <span class="n">trains</span> <span class="ow">and</span> <span class="n">evaluates</span> <span class="n">the</span> <span class="n">models</span><span class="p">,</span> <span class="ow">and</span> <span class="n">publishes</span> <span class="n">the</span> <span class="n">winning</span> <span class="n">model</span> <span class="ow">and</span> <span class="n">app</span><span class="o">.</span>
-
-<span class="n">For</span> <span class="n">a</span> <span class="n">local</span><span class="o">-</span><span class="n">only</span> <span class="n">run</span> <span class="n">without</span> <span class="n">Hub</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">call</span> <span class="n">each</span> <span class="n">script</span> <span class="k">with</span> <span class="err">`</span><span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">local</span><span class="o">-</span><span class="n">only</span><span class="err">`</span> <span class="k">for</span> <span class="n">registration</span><span class="p">,</span> <span class="err">`</span><span class="o">--</span><span class="n">local</span><span class="o">-</span><span class="n">only</span><span class="err">`</span> <span class="k">for</span> <span class="n">preparation</span><span class="p">,</span> <span class="ow">and</span> <span class="err">`</span><span class="o">--</span><span class="n">local</span><span class="o">-</span><span class="n">only</span><span class="err">`</span> <span class="k">for</span> <span class="n">training</span><span class="o">.</span> <span class="n">The</span> <span class="n">app</span> <span class="n">accepts</span> <span class="err">`</span><span class="n">MODEL_PATH</span><span class="err">`</span> <span class="n">to</span> <span class="n">load</span> <span class="n">a</span> <span class="n">local</span> <span class="n">joblib</span> <span class="n">model</span><span class="o">.</span>
+<span class="n">Use</span> <span class="n">Python</span> <span class="mf">3.12</span><span class="o">.</span> <span class="n">Install</span> <span class="n">project</span> <span class="n">dependencies</span> <span class="k">with</span> <span class="err">`</span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">tourism_project</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span><span class="err">`</span><span class="o">.</span> <span class="n">For</span> <span class="n">Hub</span> <span class="n">operations</span> <span class="nb">set</span> <span class="err">`</span><span class="n">HF_USERNAME</span><span class="o">=</span><span class="n">ashishjha001</span><span class="err">`</span> <span class="ow">and</span> <span class="n">provide</span> <span class="err">`</span><span class="n">HF_TOKEN</span><span class="err">`</span> <span class="n">through</span> <span class="n">a</span> <span class="n">local</span> <span class="n">environment</span> <span class="n">variable</span><span class="o">.</span> <span class="n">For</span> <span class="n">a</span> <span class="n">local</span><span class="o">-</span><span class="n">only</span> <span class="n">run</span><span class="p">,</span> <span class="n">use</span> <span class="err">`</span><span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">local</span><span class="o">-</span><span class="n">only</span><span class="err">`</span> <span class="k">for</span> <span class="n">registration</span> <span class="ow">and</span> <span class="err">`</span><span class="o">--</span><span class="n">local</span><span class="o">-</span><span class="n">only</span><span class="err">`</span> <span class="k">for</span> <span class="n">preparation</span><span class="o">/</span><span class="n">training</span><span class="o">.</span> <span class="n">The</span> <span class="n">app</span> <span class="n">accepts</span> <span class="err">`</span><span class="n">MODEL_PATH</span><span class="err">`</span> <span class="n">to</span> <span class="n">load</span> <span class="n">a</span> <span class="n">local</span> <span class="n">joblib</span> <span class="n">model</span><span class="o">.</span>
 
 <span class="c1">## Evaluation and limitations</span>
 
@@ -10898,7 +10922,7 @@ Deployment pins resolve on the exact Python 3.12 used by the Dockerfile when the
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The final workflow is generated from the template structure and printed below. It corrects the <code>model-training</code> job spelling and keeps the required job dependencies.</p>
+<p>The workflow includes the optional Hugging Face Docker deployment behind a repository variable. It is skipped by default on the free hosting route; the remaining jobs register data, prepare it, and train/publish the model.</p>
 </div>
 </div>
 </div>
@@ -10909,7 +10933,7 @@ Deployment pins resolve on the exact Python 3.12 used by the Dockerfile when the
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The notebook writes <code>.github/workflows/pipeline.yml</code> automatically. Review the full YAML printed in this section before pushing.</p>
+<p>The notebook writes <code>.github/workflows/pipeline.yml</code> automatically. The paid Docker Space job runs only if repository variable <code>ENABLE_HF_DOCKER_SPACE</code> is set to <code>true</code>.</p>
 </div>
 </div>
 </div>
@@ -10930,7 +10954,7 @@ Deployment pins resolve on the exact Python 3.12 used by the Dockerfile when the
   <span class="n">workflow_dispatch</span><span class="p">:</span>
 
 <span class="n">env</span><span class="p">:</span>
-  <span class="n">HF_USERNAME</span><span class="p">:</span> <span class="n">YOUR_HF_USERNAME</span>
+  <span class="n">HF_USERNAME</span><span class="p">:</span> <span class="n">ashishjha001</span>
   <span class="n">PYTHON_VERSION</span><span class="p">:</span> <span class="s2">"3.12"</span>
 
 <span class="n">jobs</span><span class="p">:</span>
@@ -10992,6 +11016,7 @@ Deployment pins resolve on the exact Python 3.12 used by the Dockerfile when the
         <span class="n">run</span><span class="p">:</span> <span class="n">python</span> <span class="n">tourism_project</span><span class="o">/</span><span class="n">model_building</span><span class="o">/</span><span class="n">train</span><span class="o">.</span><span class="n">py</span>
 
   <span class="n">deploy</span><span class="o">-</span><span class="n">hosting</span><span class="p">:</span>
+    <span class="k">if</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="nb">vars</span><span class="o">.</span><span class="n">ENABLE_HF_DOCKER_SPACE</span> <span class="o">==</span> <span class="s1">'true'</span> <span class="p">}}</span>
     <span class="n">needs</span><span class="p">:</span> <span class="p">[</span><span class="n">model</span><span class="o">-</span><span class="n">training</span><span class="p">,</span> <span class="n">data</span><span class="o">-</span><span class="n">prep</span><span class="p">,</span> <span class="n">register</span><span class="o">-</span><span class="n">dataset</span><span class="p">]</span>
     <span class="n">runs</span><span class="o">-</span><span class="n">on</span><span class="p">:</span> <span class="n">ubuntu</span><span class="o">-</span><span class="n">latest</span>
     <span class="n">steps</span><span class="p">:</span>
@@ -11055,7 +11080,7 @@ on:
   workflow_dispatch:
 
 env:
-  HF_USERNAME: YOUR_HF_USERNAME
+  HF_USERNAME: ashishjha001
   PYTHON_VERSION: "3.12"
 
 jobs:
@@ -11117,6 +11142,7 @@ jobs:
         run: python tourism_project/model_building/train.py
 
   deploy-hosting:
+    if: ${{ vars.ENABLE_HF_DOCKER_SPACE == 'true' }}
     needs: [model-training, data-prep, register-dataset]
     runs-on: ubuntu-latest
     steps:
@@ -11133,7 +11159,6 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: python tourism_project/hosting/hosting.py
-
 </pre>
 </div>
 </div>
@@ -11269,7 +11294,7 @@ jobs:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=13d7d038">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=13d7d038">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11277,7 +11302,7 @@ jobs:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Print the generated tree and query the latest Actions run when credentials are available.</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Print repository outputs and query the public Actions run.</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">requests</span>
 <span class="n">repo_files</span> <span class="o">=</span> <span class="p">[</span><span class="n">path</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">PROJECT_ROOT</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">"*"</span><span class="p">)</span> <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">part</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">"artifacts"</span><span class="p">,</span> <span class="s2">"processed"</span><span class="p">,</span> <span class="s2">"mlruns"</span><span class="p">,</span> <span class="s2">"mlruns_test"</span><span class="p">,</span> <span class="s2">"__pycache__"</span><span class="p">}</span> <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">path</span><span class="o">.</span><span class="n">parts</span><span class="p">)]</span>
@@ -11286,57 +11311,19 @@ jobs:
 <span class="n">GITHUB_REPO_URL</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://github.com/</span><span class="si">{</span><span class="n">GITHUB_USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">GITHUB_REPO</span><span class="si">}</span><span class="s2">"</span>
 <span class="n">HF_DATASET_URL</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://huggingface.co/datasets/</span><span class="si">{</span><span class="n">HF_USERNAME</span><span class="si">}</span><span class="s2">/tourism-dataset"</span>
 <span class="n">HF_MODEL_URL</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://huggingface.co/</span><span class="si">{</span><span class="n">HF_USERNAME</span><span class="si">}</span><span class="s2">/tourism-wellness-model"</span>
-<span class="n">HF_SPACE_URL</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://huggingface.co/spaces/</span><span class="si">{</span><span class="n">HF_USERNAME</span><span class="si">}</span><span class="s2">/tourism-wellness-app"</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s2">"GitHub: [</span><span class="si">{</span><span class="n">GITHUB_REPO_URL</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">GITHUB_REPO_URL</span><span class="si">}</span><span class="s2">)  </span><span class="se">\n</span><span class="s2">Hugging Face dataset: [</span><span class="si">{</span><span class="n">HF_DATASET_URL</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">HF_DATASET_URL</span><span class="si">}</span><span class="s2">)  </span><span class="se">\n</span><span class="s2">Hugging Face model: [</span><span class="si">{</span><span class="n">HF_MODEL_URL</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">HF_MODEL_URL</span><span class="si">}</span><span class="s2">)  </span><span class="se">\n</span><span class="s2">Hugging Face Space: [</span><span class="si">{</span><span class="n">HF_SPACE_URL</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">HF_SPACE_URL</span><span class="si">}</span><span class="s2">)"</span><span class="p">))</span>
-<span class="n">token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"GITHUB_TOKEN"</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">token</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"YOUR_"</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="p">[</span><span class="n">GITHUB_USERNAME</span><span class="p">,</span> <span class="n">GITHUB_REPO</span><span class="p">]):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://api.github.com/repos/</span><span class="si">{</span><span class="n">GITHUB_USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">GITHUB_REPO</span><span class="si">}</span><span class="s2">/actions/runs?per_page=1"</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">"Authorization"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"Bearer </span><span class="si">{</span><span class="n">token</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Accept"</span><span class="p">:</span> <span class="s2">"application/vnd.github+json"</span><span class="p">},</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">STREAMLIT_APP_URL</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"STREAMLIT_APP_URL"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">app_note</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Streamlit app: [</span><span class="si">{</span><span class="n">STREAMLIT_APP_URL</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">STREAMLIT_APP_URL</span><span class="si">}</span><span class="s2">)"</span> <span class="k">if</span> <span class="n">STREAMLIT_APP_URL</span> <span class="k">else</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">Streamlit app: deploy once at [Streamlit Community Cloud](https://share.streamlit.io/); set STREAMLIT_APP_URL after deployment."</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s2">"GitHub: [</span><span class="si">{</span><span class="n">GITHUB_REPO_URL</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">GITHUB_REPO_URL</span><span class="si">}</span><span class="s2">)  </span><span class="se">\n</span><span class="s2">Hugging Face dataset: [</span><span class="si">{</span><span class="n">HF_DATASET_URL</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">HF_DATASET_URL</span><span class="si">}</span><span class="s2">)  </span><span class="se">\n</span><span class="s2">Hugging Face model: [</span><span class="si">{</span><span class="n">HF_MODEL_URL</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">HF_MODEL_URL</span><span class="si">}</span><span class="s2">)</span><span class="si">{</span><span class="n">app_note</span><span class="si">}</span><span class="s2">"</span><span class="p">))</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">"https://api.github.com/repos/</span><span class="si">{</span><span class="n">GITHUB_USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">GITHUB_REPO</span><span class="si">}</span><span class="s2">/actions/runs?per_page=1"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">"Accept"</span><span class="p">:</span> <span class="s2">"application/vnd.github+json"</span><span class="p">},</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">ok</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"workflow_runs"</span><span class="p">):</span>
-        <span class="n">run</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"workflow_runs"</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span> <span class="nb">print</span><span class="p">({</span><span class="s2">"status"</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"status"</span><span class="p">),</span> <span class="s2">"conclusion"</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"conclusion"</span><span class="p">),</span> <span class="s2">"url"</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"html_url"</span><span class="p">)})</span>
-    <span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Actions run query returned HTTP </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"GitHub Actions run evidence is pending repository access and a workflow run."</span><span class="p">)</span>
+        <span class="n">run</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"workflow_runs"</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">({</span><span class="s2">"status"</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"status"</span><span class="p">),</span> <span class="s2">"conclusion"</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"conclusion"</span><span class="p">),</span> <span class="s2">"url"</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"html_url"</span><span class="p">)})</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Public Actions run query returned HTTP </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Could not query GitHub Actions: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>   .github/workflows/pipeline.yml
-   .gitignore
-   README.md
-   tourism_project/data/tourism.csv
-   tourism_project/deployment/app.py
-   tourism_project/deployment/Dockerfile
-   tourism_project/deployment/requirements.txt
-   tourism_project/hosting/hosting.py
-   tourism_project/model_building/data_register.py
-   tourism_project/model_building/prep.py
-   tourism_project/model_building/train.py
-   tourism_project/requirements.txt
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output" data-mime-type="text/markdown" tabindex="0">
-<p>GitHub: <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_REPO">https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_REPO</a><br/>
-Hugging Face dataset: <a href="https://huggingface.co/datasets/YOUR_HF_USERNAME/tourism-dataset">https://huggingface.co/datasets/YOUR_HF_USERNAME/tourism-dataset</a><br/>
-Hugging Face model: <a href="https://huggingface.co/YOUR_HF_USERNAME/tourism-wellness-model">https://huggingface.co/YOUR_HF_USERNAME/tourism-wellness-model</a><br/>
-Hugging Face Space: <a href="https://huggingface.co/spaces/YOUR_HF_USERNAME/tourism-wellness-app">https://huggingface.co/spaces/YOUR_HF_USERNAME/tourism-wellness-app</a></p>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>GitHub Actions run evidence is pending repository access and a workflow run.
-</pre>
 </div>
 </div>
 </div>
@@ -11702,7 +11689,7 @@ Feature importances describe model associations after one-hot encoding; they are
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>Streamlit on Hugging Face (link to HF space, screenshot of Streamlit app)</li>
+<li>Streamlit Community Cloud (public app link and screenshot of the deployed Streamlit app)</li>
 </ul>
 </div>
 </div>
@@ -11714,7 +11701,7 @@ Feature importances describe model associations after one-hot encoding; they are
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>[INSERT SCREENSHOT: public Hugging Face Streamlit app showing a prediction]</p>
+<p>[INSERT SCREENSHOT: public Streamlit Community Cloud app showing a prediction]</p>
 </div>
 </div>
 </div>
@@ -11727,16 +11714,17 @@ Feature importances describe model associations after one-hot encoding; they are
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">requests</span><span class="o">,</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="o">,</span><span class="w"> </span><span class="nn">joblib</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
-<span class="n">space_ready</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">HF_USERNAME</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"YOUR_"</span><span class="p">):</span>
-    <span class="n">app_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://</span><span class="si">{</span><span class="n">HF_USERNAME</span><span class="si">}</span><span class="s2">-tourism-wellness-app.hf.space"</span>
+<span class="n">streamlit_app_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"STREAMLIT_APP_URL"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">app_ready</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">if</span> <span class="n">streamlit_app_url</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">app_url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">({</span><span class="s2">"space_url"</span><span class="p">:</span> <span class="n">app_url</span><span class="p">,</span> <span class="s2">"http_status"</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="s2">"content_type"</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"content-type"</span><span class="p">),</span> <span class="s2">"response_bytes"</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)})</span>
-        <span class="n">space_ready</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
-    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span> <span class="nb">print</span><span class="p">({</span><span class="s2">"space_url"</span><span class="p">:</span> <span class="n">app_url</span><span class="p">,</span> <span class="s2">"request_error"</span><span class="p">:</span> <span class="nb">type</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">})</span>
-<span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"Live Space HTTP request is pending the real HF username and public deployment."</span><span class="p">)</span>
-
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">streamlit_app_url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">({</span><span class="s2">"streamlit_app_url"</span><span class="p">:</span> <span class="n">streamlit_app_url</span><span class="p">,</span> <span class="s2">"http_status"</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="s2">"content_type"</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"content-type"</span><span class="p">),</span> <span class="s2">"response_bytes"</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)})</span>
+        <span class="n">app_ready</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">({</span><span class="s2">"streamlit_app_url"</span><span class="p">:</span> <span class="n">streamlit_app_url</span><span class="p">,</span> <span class="s2">"request_error"</span><span class="p">:</span> <span class="nb">type</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">})</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Streamlit app is not deployed yet. Deploy using STREAMLIT_CLOUD_DEPLOYMENT.md, then set STREAMLIT_APP_URL to its public URL."</span><span class="p">)</span>
 <span class="n">evaluation_path</span> <span class="o">=</span> <span class="n">PROJECT_ROOT</span> <span class="o">/</span> <span class="s2">"model_building"</span> <span class="o">/</span> <span class="s2">"artifacts"</span> <span class="o">/</span> <span class="s2">"evaluation.json"</span>
 <span class="n">model_path</span> <span class="o">=</span> <span class="n">PROJECT_ROOT</span> <span class="o">/</span> <span class="s2">"model_building"</span> <span class="o">/</span> <span class="s2">"artifacts"</span> <span class="o">/</span> <span class="s2">"tourism_model.joblib"</span>
 <span class="k">if</span> <span class="n">evaluation_path</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="n">model_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
@@ -11745,7 +11733,7 @@ Feature importances describe model associations after one-hot encoding; they are
     <span class="n">local_model</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">tourism_app</span><span class="o">.</span><span class="n">predict_customer</span><span class="p">(</span><span class="n">sample_payload</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">local_model</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">({</span><span class="s2">"sample_request"</span><span class="p">:</span> <span class="n">sample_payload</span><span class="p">,</span> <span class="s2">"sample_prediction"</span><span class="p">:</span> <span class="n">result</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">:</span> <span class="s2">"saved model through the Streamlit app prediction function"</span><span class="p">})</span>
-    <span class="k">if</span> <span class="n">space_ready</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"The public Space UI returned HTTP 200. Streamlit predictions run through its interactive form; the sample above exercises the same app function with the saved model."</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">app_ready</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"The public Streamlit app returned HTTP 200. The sample above exercises the same app prediction function with the saved model."</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"Sample prediction is pending a trained model artifact."</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -11759,7 +11747,7 @@ Feature importances describe model associations after one-hot encoding; they are
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Live Space HTTP request is pending the real HF username and public deployment.
+<pre>Streamlit app is not deployed yet. Deploy using STREAMLIT_CLOUD_DEPLOYMENT.md, then set STREAMLIT_APP_URL to its public URL.
 {'sample_request': {'Age': 34.0, 'TypeofContact': 'Company Invited', 'CityTier': 1, 'DurationOfPitch': 9.0, 'Occupation': 'Salaried', 'Gender': 'Male', 'NumberOfPersonVisiting': 2, 'NumberOfFollowups': 4.0, 'ProductPitched': 'Basic', 'PreferredPropertyStar': 3.0, 'MaritalStatus': 'Married', 'NumberOfTrips': 4.0, 'Passport': 0, 'PitchSatisfactionScore': 1, 'OwnCar': 0, 'NumberOfChildrenVisiting': 0.0, 'Designation': 'Executive', 'MonthlyIncome': 17979.0}, 'sample_prediction': {'prediction': 'Will not purchase', 'class': 0, 'probability': 0.01115746796131134}, 'source': 'saved model through the Streamlit app prediction function'}
 </pre>
 </div>
@@ -11773,12 +11761,13 @@ Feature importances describe model associations after one-hot encoding; they are
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Rubric-self-audit-and-manual-steps">Rubric self-audit and manual steps<a class="anchor-link" href="#Rubric-self-audit-and-manual-steps">¶</a></h3><p>The local build covers the notebook, scripts, model comparison, evaluation, deployment files, and workflow generation. Hub uploads, a green Actions run, and a public Space cannot be confirmed while account placeholders and tokens are absent.</p>
-<p><strong>Manual steps:</strong> replace the four account placeholders; create an empty public GitHub repository; add a fine-grained token scoped to that repository and run the push cell; create a Hugging Face write token and enter it only through the masked prompt; add it in GitHub under <strong>Settings → Secrets and variables → Actions → New repository secret</strong>, named <code>HF_TOKEN</code>; then run the workflow and confirm it is green. Make the Space public in Hugging Face if needed. Capture the three screenshots at their marked placeholders. Finally run all cells in Colab and export the executed notebook as HTML.</p>
+<h3 id="Rubric-self-audit-and-manual-steps">Rubric self-audit and manual steps<a class="anchor-link" href="#Rubric-self-audit-and-manual-steps">¶</a></h3><p>The repository includes the notebook and HTML export, source dataset, preprocessing and training scripts, evaluation artifacts, Streamlit app, workflow, and documentation. Hugging Face dataset/model registration succeeded previously; the Docker Space job returned HTTP 402 because HF Docker Spaces require a paid plan. The free hosting route is Streamlit Community Cloud.</p>
+<p><strong>Complete the free app deployment:</strong> sign in to <a href="https://share.streamlit.io/">Streamlit Community Cloud</a> with GitHub, create an app from <code>jhaashishmithilesh1005-jpg/tourism-wellness-mlops-project</code> on <code>main</code>, set the entry file to <code>tourism_project/deployment/app.py</code>, choose Python 3.12, leave Secrets empty, and deploy. Then add the app URL and a screenshot here and set <code>STREAMLIT_APP_URL</code> in the notebook before running the live app check.</p>
+<p><strong>Pipeline:</strong> the GitHub Actions workflow still requires the repository secret <code>HF_TOKEN</code> for Hub dataset/model uploads; do not paste it into the notebook or source files. The optional Hugging Face Docker Space job is skipped by default. A rubric item that specifically requires a public Hugging Face Docker Space cannot be completed on the free HF plan; Streamlit Community Cloud is the free alternative.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f09a583d">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f09a583d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11787,94 +11776,17 @@ Feature importances describe model associations after one-hot encoding; they are
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rubric_status</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
-    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.1 Data Registration"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"Code ready; Hub upload pending credentials"</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.2 Data Preparation"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"PASS locally; Hub source pending credentials"</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.3 Model Training and MLflow"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"PASS locally"</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.4 Model Deployment"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"PASS locally; Space publication pending"</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.5 Hosting"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"Code ready; public Space pending credentials"</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.6 GitHub Actions"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"Workflow generated; run pending repository and secret"</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.7 Output Evaluation"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"PASS locally; remote evidence pending"</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.8 Notebook Quality"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"Executed locally; Colab rerun and HTML export provided"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.1 Data Registration"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"PASS in previous GitHub Actions run; public HF dataset exists"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.2 Data Preparation"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"PASS in previous GitHub Actions run"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.3 Model Training and MLflow"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"PASS in previous GitHub Actions run; public model exists"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.4 Model Deployment"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"Streamlit app is ready; first Community Cloud publish is manual"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.5 Hosting"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"Free Streamlit route; app URL and screenshot pending first deployment"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.6 GitHub Actions"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"Workflow updated; rerun after pushing; paid Docker job skipped by default"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.7 Output Evaluation"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"Local sample prediction present; live app check pending deployment"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"section"</span><span class="p">:</span> <span class="s2">"5.8 Notebook Quality"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"Notebook and HTML export updated for the free route"</span><span class="p">},</span>
 <span class="p">])</span>
 <span class="n">display</span><span class="p">(</span><span class="n">rubric_status</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>section</th>
-<th>status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>5.1 Data Registration</td>
-<td>Code ready; Hub upload pending credentials</td>
-</tr>
-<tr>
-<th>1</th>
-<td>5.2 Data Preparation</td>
-<td>PASS locally; Hub source pending credentials</td>
-</tr>
-<tr>
-<th>2</th>
-<td>5.3 Model Training and MLflow</td>
-<td>PASS locally</td>
-</tr>
-<tr>
-<th>3</th>
-<td>5.4 Model Deployment</td>
-<td>PASS locally; Space publication pending</td>
-</tr>
-<tr>
-<th>4</th>
-<td>5.5 Hosting</td>
-<td>Code ready; public Space pending credentials</td>
-</tr>
-<tr>
-<th>5</th>
-<td>5.6 GitHub Actions</td>
-<td>Workflow generated; run pending repository and...</td>
-</tr>
-<tr>
-<th>6</th>
-<td>5.7 Output Evaluation</td>
-<td>PASS locally; remote evidence pending</td>
-</tr>
-<tr>
-<th>7</th>
-<td>5.8 Notebook Quality</td>
-<td>Executed locally; Colab rerun and HTML export ...</td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 </div>
 </div>

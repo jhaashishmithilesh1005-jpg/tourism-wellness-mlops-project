@@ -58,7 +58,7 @@ def model_repo_id() -> str:
     configured = os.getenv("HF_MODEL_REPO")
     if configured:
         return configured
-    username = os.getenv("HF_USERNAME", "").strip()
+    username = os.getenv("HF_USERNAME", "ashishjha001").strip()
     if username and username.upper() != "YOUR_HF_USERNAME":
         return f"{username}/tourism-wellness-model"
     raise RuntimeError("Set HF_MODEL_REPO or HF_USERNAME before loading the model.")
